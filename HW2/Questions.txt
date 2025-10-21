@@ -1,0 +1,35 @@
+﻿1. In step 1, which Linux commands did you use to (1) create a new folder and (2) copy
+your files into a new folder?
+
+
+I did mkdir HW2 to create the folder. Then I did cp user.h user.cpp network.h network.cpp social_network.cpp Makefile hw2/.
+
+
+2. Could any of the breadth-first-search questions (shortestPath and distanceUser) be
+solved with depth-first-search? Why or why not?
+No you cannot use depth-first search to solve the breadth-first search questions because DFS doesn’t work for shortest path and it can end up returning a longer path than DFS
+
+
+
+
+3. Could the depth-first-search question (groups) be solved with breadth-first-search?
+Why or why not?
+BFS could solve the DFS questions because BFS can do the same thing as DFS but just quicker and with a shortest path.
+4. Can the suggestFriends problem be solved without breadth-first-search and depth-first-
+search?
+Yes it can be solved without BFS or DFS, I didn’t use either one.
+
+
+5. Using big-O notation, what is the runtime of your shortestPath implementation in
+terms of n (the number of vertices) and/or m (the number of edges)?
+O(n+m)
+
+
+6. Using big-O notation, what is the runtime of your groups implementation in terms of
+n (the number of vertices) and/or m (the number of edges)?
+O(n+m)
+
+
+7. In hours, (approximately) how much time did you spend on this assignment? (there
+are no wrong answers)
+3 hours

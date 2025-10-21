@@ -1,0 +1,31 @@
+﻿1. In the Network class, we stored the users as a vector of User pointers, rather than a
+vector of Users. Explain one main advantage of this?
+
+
+Using a vector of User* avoids creating multiple copies of the same user when the vector changes size. It also keeps each user’s memory address fixed, so all references to that user remain valid.
+
+
+2. In the User class, the getFriends returns a reference to the set of friends. Explain the main advantage the returning a reference has over returning the set without reference?
+Returning a reference prevents creating an expensive copy of the entire set<int>. It also allows direct modification of the same friends_ data stored in the User object.
+
+
+3. Explain one main advantage of storing the friends as a set, rather than a vector, in the User class?
+A set automatically prevents duplicate friend IDs and keeps them sorted. It also allows O(log n) insertions and deletions, which are more efficient than O(n) operations on a vector.
+
+
+4. You might have tried implementing readUsers by pushing pointers to Users allocated
+on the stack, rather than pointers to Users on the heap, such as below. Explain why this will not work?
+
+
+A stack-allocated User object is destroyed when the function ends, leaving a dangling pointer in the vector. Only heap-allocated objects persist beyond the function scope, so new User(...) is required.
+
+
+5. Using big-O notation, in terms of the number of vertices n and/or the number of edges
+m, describe the runtime of the following methods: User::addFriend, Network::addConnection, Network::deleteConnection, Network::numUsers?
+
+
+User::addFriend runs in O(log n) because inserting into a set takes logarithmic time. Network::addConnection and Network::deleteConnection both run in O(n) due to name lookups plus O(log n) friend operations, while Network::numUsers runs in O(1).
+
+
+6. In hours, (approximately) how much time did you spend on this assignment? (there are no wrong answers, obviously)
+I spent around 4 hours working on this assignment
