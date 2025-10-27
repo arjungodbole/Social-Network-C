@@ -1,0 +1,8 @@
+﻿1. Why do we store the posts as a vector of Post pointers, and not as a vector of Posts? There are two main reasons
+We have to put both the Post and the LinkPost in the same vector. With vector<Post>, LinkPost objects will lose all of their data. Using vector<Post*> allows us to store pointers and call the correct virtual function
+2. In LinkPost::toString(), why can you not access the message field directly?
+Message_ is a private member of the post class. Private members can’t be accessed by the child class so LinkPost has to use the public method of getMessage.
+3. You want to call the Post::toString method for Posts and LinkPost::toString method for LinkPost in User::getPostsString. What keyword makes this possible, and where does that keyword go?
+The keyword is virtual and it goes before the toString() declaration in post.h
+4. In hours, (approximately) how much time did you spend on this assignment? (there are no wrong answers)
+7 hours
