@@ -1,5 +1,7 @@
-# Social-Network-C-
+# Social-Network-C
 
 This repository is for my CSCI 62-Advanced Programming Class
 
-We are building a social network class and I will be updating the repo weekly
+I created a Social Network using C++ and QT for the front end. We used different types of data structures, such as Graphs, Polymorphism and BFS.
+
+
